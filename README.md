@@ -325,4 +325,37 @@ Remote：远程仓库
 ## 字符串格式转时间格式----string > datetime/time
 ```
 1 from datetime import datetime
+2 end_time = datetime.strptime('2017-03-03 20:30:57','%Y-%m-%d %H:%M:%S') 
+  #参数一为字符串格式时间，参数二为字符串时间格式
+3 import time
+4 end_time = time.strptime('20170101','%Y%m%d')
+ # 参数一为字符串格式时间，参数二为字符串时间格式
+```
+## 时间格式转字符串格式----datetime/time > string
+```
+1 from datetime import datetime
+2 end_time = datetime.now().strftime('%Y%m%d%H%M%S')
+  # datetime.now()获取当前时间，strftime()是转换成字符串操作，参数为转换后的格式
+3 import time
+4 end_time = time.strftime('%Y-%m-%d %w %H:%M:%S')
+  #time.strftime()获取当前时间并按strftime的参数转换成字符串格式
+5 time = time.time()
+6 end_time = time strftime('%Y%m%d',time)
+  #把给定的时间转换成固定格式的字符串
+  
+```
+## 时间的天数操作
+```获取昨天的时间
+1 myTime = time.strftime('%Y%m%d',time.localtime(time.time() - 24*60*60) )
+2 d1 = datetime.datetime(2017,04,07)
+3 d2 = datetime.datetime(2017,05,01)
+4 day = (d1-d2).days # d1与d2的天数差
+```
+```
+其本上常用的类有：datetime和timedelta两个。它们之间可以相互加减。
+每个类都有一些方法和属性可以查看具体的值，如datetime可以查看：天数(day)，小时数(hour)，星期几(weekday())等;
+timedelta可以查看：天数(days)，秒数(seconds)  
+start_date = datetime.datetime()
+mid_date = start_date + timedelta(days=7)
+#mid_date 等于在start_date基础上加7天，要取过去的几天，可以用days=-7
 ```
