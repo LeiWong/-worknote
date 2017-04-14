@@ -373,10 +373,23 @@ content.sort(key=operator.itemgetter('updated_at'), reverse=True)
 print (content)
 # content 按照每个字典中的updated_at键排序
 ```
-# 求n的阶乘
+# 求n的阶乘,enumerate用法
 ```
 from operator import mul
 # mul(a,b) 表示a*b
 total = reduce(mul,[x for x in range(1,n)],1)
 # mul 表示方法,第二个参数为列表,最后以为默认到1结束
 ```
+### enumerate 用法
+```
+array = [1, 2, 3, 4, 5]
+ 
+for i, e in enumerate(array,0):
+    print i, e
+#0 1
+#1 2
+#2 3
+#3 4
+# 使用enumerate可以一次性将索引和值取出，避免使用索引来取值，而且enumerate的第二个参数可以调整索引下标的起始位置，默认为0
+```
+
