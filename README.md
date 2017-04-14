@@ -359,3 +359,24 @@ start_date = datetime.datetime()
 mid_date = start_date + timedelta(days=7)
 #mid_date 等于在start_date基础上加7天，要取过去的几天，可以用days=-7
 ```
+
+# 列表中的字典排序
+```
+import operator
+# django查询数据库
+content = []
+ret = MedOrgPrincipal.objects.filter(user_id=user_id, org_uuid=org_uuid).values()
+for item in ret:
+    cintent.append(item)
+    
+content.sort(key=operator.itemgetter('updated_at'), reverse=True)
+print (content)
+# content 按照每个字典中的updated_at键排序
+```
+# 求n的阶乘
+```
+from operator import mul
+# mul(a,b) 表示a*b
+total = reduce(mul,[x for x in range(1,n)],1)
+# mul 表示方法,第二个参数为列表,最后以为默认到1结束
+```
