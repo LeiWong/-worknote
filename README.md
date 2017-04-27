@@ -314,6 +314,25 @@ Remote：远程仓库
 ```
 1 $ git revert [commit]
 ```
+## feature分支
+### feature分支是当开发新功能时,新建feature分支,在feature分支上开发新功能,开发好新功能时,切换到项目主分支,把feature分支合并到主分支
+```
+1 $ git checkout -b feature/xxx
+# 新建feature分支
+```
+```
+2 $ git push origin feature/xxx
+# 在远程新建feature分支
+```
+```
+3 $ git checkout dev-medical
+# 切换到项目分支
+```
+```
+4 git merge feature/xxx
+# 开发后切换到项目分支并合并feature分支
+```
+
 ## 十、其他
 
 ### 生成一个可供发布的压缩包
