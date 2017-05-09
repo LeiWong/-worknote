@@ -412,3 +412,6 @@ for i, e in enumerate(array,0):
 # 使用enumerate可以一次性将索引和值取出，避免使用索引来取值，而且enumerate的第二个参数可以调整索引下标的起始位置，默认为0
 ```
 
+
+
+# celery 的使用
