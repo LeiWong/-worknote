@@ -379,6 +379,15 @@ mid_date = start_date + timedelta(days=7)
 #mid_date 等于在start_date基础上加7天，要取过去的几天，可以用days=-7
 ```
 
+```
+ today = datetime.date.today()        # 获取当前日期, 因为要求时分秒为0, 所以不要求时间
+    weekday = today.weekday()        # 获取当前周的排序, 周一为0, 周日为6
+    monday_delta = datetime.timedelta(weekday)    # 当前日期距离周一的时间差
+    sunday_delta = datetime.timedelta(7 - weekday)    # 当前日期距离下周一的时间差
+    monday = today - monday_delta    # 获取这周一日期
+    next_monday = today + sunday_delta    # 获取下周一日期
+```
+
 # 列表中的字典排序
 ```
 import operator
