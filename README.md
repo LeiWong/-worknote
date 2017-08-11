@@ -424,3 +424,9 @@ for i, e in enumerate(array,0):
 
 
 # celery 的使用
+
+
+# Python tutorial
+```
+http://www.python-course.eu/
+```
